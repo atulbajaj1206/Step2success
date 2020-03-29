@@ -17,9 +17,9 @@ for account in accounts:
 	folders = inbox.Folders
 
 
-	
+
 	#change inbox name with other folders name
-	messages = folders['gsk.rtpa'].Items
+	messages = folders['Inbox'].Items
 	#to read sub folder under inbox
 	#messages = folders['subfolder'].Items
 	for message2 in messages:
@@ -27,14 +27,15 @@ for account in accounts:
 		try:
 					
 			sender = str(message2.Sender)
-			print('k')
+			
 			receiver = str(message2.To)
 			cc = message2.Cc
 			subject = str(message2.Subject)
 					
 			body = str(message2.Body)
-							
-			if (message2.Unread == True) :
+
+			if True:				
+			#if (message2.Unread == True) :
 				#if you want to print only unread messages and set back to read status with a flag.
 							
 				message2.Unread =False
