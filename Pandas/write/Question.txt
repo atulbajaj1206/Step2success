@@ -1,0 +1,9 @@
+Q1. Read any excel and convert it to csv from pandas.
+Q2. Color excel every alternate comun in red color
+Q3.Wite excel from openpyexl to write alternative no sqrrot onnalternative row.
+
+
+
+
+
+Q3. Read mails from outlook and write sender,subject,date,body in csv
