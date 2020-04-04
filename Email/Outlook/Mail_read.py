@@ -21,7 +21,7 @@ for account in accounts:
 	#change inbox name with other folders name
 	messages = folders['Inbox'].Items
 	#to read sub folder under inbox
-	#messages = folders['subfolder'].Items
+	#messages = messages = folders['Inbox'].Folders['Incident Audit'].Items
 	for message2 in messages:
 		#reading messages one by one
 		try:
@@ -33,6 +33,8 @@ for account in accounts:
 			subject = str(message2.Subject)
 					
 			body = str(message2.Body)
+
+			
 
 			if True:				
 			#if (message2.Unread == True) :
