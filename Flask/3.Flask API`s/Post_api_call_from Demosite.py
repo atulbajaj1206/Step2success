@@ -4,6 +4,7 @@
 #        copyright           #
 ##############################      
 # To call post api
+# site https://reqres.in/
 
 import requests
 import json
@@ -11,17 +12,16 @@ import json
 
 
 
-url=('http://dummy.restapiexample.com/api/v1/create')
+url=('https://reqres.in/api/users')
 headers = {'Content-type': 'application/json'}
 
 
-data= {"name":"test","salary":"123","age":"23"}
+data= {"name":"test","job":"123"}
 print(json.dumps(data))
 
 
 
 r = requests.post(url, data=json.dumps(data), headers=headers)
-print(r)
 
 print(r.status_code)
 print (r.json())

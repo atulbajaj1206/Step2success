@@ -11,7 +11,7 @@ import json
 print('flask')
 
 
-url=('http://localhost:5001/sum')
+url=('http://localhost:5051/sum')
 headers = {'Content-type': 'application/json'}
 
 
@@ -24,7 +24,7 @@ data= {
 
 
 
-r = requests.post(url, data=json.dumps(data), headers=headers)
 
-print(r.status_code)
+r = requests.post(url, data=json.dumps(data), headers=headers)
+print( r.status_code)
 print (r.json())

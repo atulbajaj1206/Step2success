@@ -9,6 +9,8 @@ def excel_write(col_a,col_b,line_no):
 
 	#loading excel
     workbook_obj = openpyxl.load_workbook(file_name)
+
+
    
     sheet_obj = workbook_obj['Sheet1']
     line_no=line_no+2#excel column starts from 2,1 is header

@@ -7,7 +7,9 @@ import time
 outlook = win32com.client.Dispatch("Outlook.Application").GetNamespace("MAPI")
 accounts= win32com.client.Dispatch("Outlook.Application").Session.Accounts;
 #connection with outlook
+
 for account in accounts:
+
 	#for multiple accounts in outlook
 	
 	inbox = outlook.Folders(account.DeliveryStore.DisplayName)
@@ -20,11 +22,16 @@ for account in accounts:
 
 	#change inbox name with other folders name
 	messages = folders['Inbox'].Items
+	
 	#to read sub folder under inbox
 	#messages = messages = folders['Inbox'].Folders['Incident Audit'].Items
-	for message2 in messages:
+	length=len(messages)
+	print(length)
+
+	for i in range(length,0,-1):
 		#reading messages one by one
 		try:
+			message2=messages[i]
 					
 			sender = str(message2.Sender)
 			
